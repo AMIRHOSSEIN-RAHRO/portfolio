@@ -1,1 +1,706 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> <title>Portfolio AMIRHOSSEIN-RAHRO</title> <meta name="theme-color" content="#00734b"> <!-- رنگ نوار مرورگر --> <link rel="stylesheet" href="./style.css"> <link rel="icon" href="logo.jpg" type="image/x-icon"> <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet"> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <script src="https://cdn.jsdelivr.net/npm/progressbar.js"></script> <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script> </head> <body> <nav class="navbar navbar-expand-lg sticky-top" style=' background-color: rgb(255 255 255);'> <div class="container-fluid m-2"> <a target="_blank" class="navbar-brand" href="#">Portfolio</a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button> <div class="collapse navbar-collapse" id="navbarSupportedContent"> <ul class="navbar-nav me-auto mb-2 mb-lg-0" style='margin-top: 10px;'> </ul> <form class="d-flex" role="search"> <a href=""><p>Home</p></a> <a href="#about"><p>About</p></a> <a href="#services"><p>Services</p></a> <a href="#skills"><p>skills</p></a> <a href=
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Portfolio Amirhossein Rahro</title>
+    <meta name="theme-color" content="#00734b">
+    <!-- رنگ نوار مرورگر -->
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="logo-my.jpg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/progressbar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg sticky-top" style='    background-color: rgb(255 255 255);'>
+      <div class="container-fluid m-2">
+        <a target="_blank" class="navbar-brand" href="#">Portfolio</a>
+        <button class="navbar-toggler foucse_style" style='    border: 0;' type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0" style='margin-top: 10px;'>
+          </ul>
+          <form class="d-flex style_nav" role="search" >
+            <a href="">
+              <p>Home</p>
+            </a>
+            <a href="#about">
+              <p>About</p>
+            </a>
+            <a href="#services">
+              <p>Services</p>
+            </a>
+            <!--  <a href="#skills"><p>skills</p></a>-->
+            <a href="#projects">
+              <p>Projects</p>
+            </a>
+            <a href="#contact">
+              <p>Contact</p>
+            </a>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <style>
+      .navbar {
+      transition: transform 0.3s ease-in-out;
+      }
+      .navbar.hide {
+      transform: translateY(-100%);
+      }
+      .navbar .navbar-toggler:focus {
+      box-shadow: 0 0 0 0 !important;
+      }
+    </style>
+    <script>
+      let lastScrollTop = 0;
+      const navbar = document.querySelector('.navbar');
+      
+      window.addEventListener('scroll', () => {
+      const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      
+      if (currentScrollTop > lastScrollTop) {
+      // Scrolling down
+      navbar.classList.add('hide');
+      } else {
+      // Scrolling up
+      navbar.classList.remove('hide');
+      }
+      
+      lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // Avoid negative values
+      });
+      
+    </script>
+    <div class="heading-parent" style='      width: 93%; '>
+      <div class="heading-child-left" style='width: 97%;'>
+        <h6>Hi i am</h6>
+        <h3>Amerhossein Rahro</h3>
+        <h1>Full stack developer</h1>
+        <div class="social-media-link">
+          <a target="_blank" href="https://www.linkedin.com/in/amirhossein-rahro/"> <i class="fa-brands fa-linkedin"></i></a> 
+          <a target="_blank" href="https://github.com/AMIRHOSSEIN-RAHRO">   <i class="fa-brands fa-github"></i></a> 
+        </div>
+        <div class="hire-cv">
+          <a href="#contact" > <button class="button-1">Hire me</button></a>
+          <a href="resume.pdf" download id="button-2"> <button>Download CV</button></a>
+        </div>
+      </div>
+      <div class="heading-child-right" style='    margin-top: 0px;'>
+        <img src="https://themewagon.github.io/satner/img/banner/home-right.png" alt="">
+      </div>
+    </div>
+    <div class="about-section" id="about">
+      <div>
+        <img src="https://themewagon.github.io/satner/img/about-us.png" alt="">
+      </div>
+      <div class="about-section-right">
+        <h1>let as
+          <br>
+          Introduce about
+          <br>
+          myself
+        </h1>
+        <p style='text-align: justify;'>
+          𝗛𝗲𝘆! 𝗜’𝗺 𝗔𝗺𝗶𝗿𝗛𝗼𝘀𝘀𝗲𝗶𝗻,
+          <br/>
+          a Senior PHP Developer and Full-Stack Architect with a passion for building secure and scalable web solutions.
+          <br/>
+          With over six years of experience, I specialize in transforming challenges into high-impact applications.
+          <br/>
+          <br/>
+          ◉ 𝗠𝘆 𝗲𝘅𝗽𝗲𝗿𝘁𝗶𝘀𝗲 𝗶𝗻𝗰𝗹𝘂𝗱𝗲𝘀:
+          <br/>
+          ◈ 𝐖𝐞𝐛 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫 ◈
+          <br/>
+          Expert in PHP, MySQL, JavaScript (React - Mid-level), HTML5, CSS3 (Bootstrap, Tailwind CSS), and Progressive Web Applications (PWA).
+          <br/>
+          ◈ 𝐁𝐚𝐜𝐤-𝐄𝐧𝐝 𝐀𝐏𝐈 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐦𝐞𝐧𝐭 ◈
+          <br/>
+          Proficient in crafting APIs with PHP, Python (Flask, OpenCV), and secure REST APIs (JWT).
+          <br/>
+          ◈ 𝐒𝐞𝐜𝐮𝐫𝐢𝐭𝐲 ◈
+          <br/>
+          Specialist in Cybersecurity, Ethical Hacking (CEH Concepts), Vulnerability Analysis, OSINT, Encryption, and Infrastructure Management (Linux, Git, AWS).
+          <br/>
+          ◈ 𝐔𝐈/𝐔𝐗 𝐆𝐫𝐚𝐩𝐡𝐢𝐜 𝐃𝐞𝐬𝐢𝐠𝐧 ◈
+          <br/>
+          Talented in Adobe Photoshop, Illustrator, and UI/UX optimization.
+          <br/>
+          <br/>
+          ◉ 𝗣𝗿𝗼𝗷𝗲𝗰𝘁𝘀:
+          <br/>
+          ◈ 𝙈𝙒-𝘼𝙄 𝙋𝙡𝙖𝙩𝙛𝙤𝙧𝙢 ◈
+          <br/>
+          As a Full-Stack Developer and AI Innovator, I spearheaded MW-AI, a platform that processed over 70k+ global requests with a 98% satisfaction rate. Integrated features include NLP, chatbots, image processing, and historical translations.
+          <br/>
+          ◈ 𝙈𝙧 𝘾𝙝𝙧𝙞𝙨 𝙙𝙤 ◈
+          <br/>
+          Responsive personal website showcasing completed works and projects.
+          <br/>
+          ◈ 𝙁𝙖𝙧𝙖𝙠𝙖𝙧 𝘾𝙤𝙢𝙥𝙖𝙣𝙮 ◈
+          <br/>
+          Online job search platform tailored for seamless user experience.
+          <br/>
+          ◈ 𝙃𝙖𝙮𝙢𝙤𝙙𝙚 ◈
+          <br/>
+          A modern e-commerce platform integrating global design and color psychology principles.
+          <br/>
+          <br/>
+          𝐖𝐡𝐚𝐭 𝐬𝐞𝐭𝐬 𝐦𝐞 𝐚𝐩𝐚𝐫𝐭 𝐢𝐬 𝐭𝐡𝐚𝐭 𝐈 𝐝𝐨 𝐰𝐡𝐚𝐭 𝐈 𝐥𝐨𝐯𝐞, 𝐧𝐨𝐭 𝐟𝐨𝐫 𝐦𝐨𝐧𝐞𝐲 😊👌
+          <br/>
+          📌 Email: 𝗺𝘆.𝗮𝗺𝗶𝗿𝗵𝗼𝘀𝘀𝗲𝗶𝗻.𝗿𝗮𝗵𝗿𝗼@𝗴𝗺𝗮𝗶𝗹.𝗰𝗼𝗺
+          <br/>
+          ✆ WhatsApp: +𝟵𝟴𝟵𝟯𝟲𝟮𝟵𝟳𝟬𝟴𝟰𝟬
+        </p>
+        <a href="./resume.pdf"><button>Download CV</button></a>
+      </div>
+    </div>
+    <div hidden class="services" id="services">
+      <div class="services-first-heading">
+        <hr>
+        <p>what i do</p>
+      </div>
+      <h2> Awesome Quality Services</h2>
+      <div class="services-box-parent-row">
+        <div class="services-box-child-row" data-aos="fade-up">
+          <div class="services-i-tag-div">
+            <i class="fa-brands fa-html5"></i>
+          </div>
+          <div class="services-box-content-div">
+            <h1>HTML & CSS Expertise</h1>
+            <p>I specialize in creating responsive and visually appealing websites using HTML5 and CSS3</p>
+          </div>
+        </div>
+        <div class="services-box-child-row" data-aos="fade-up">
+          <div class="services-i-tag-div">
+            <i class="fa-brands fa-js"></i>
+          </div>
+          <div class="services-box-content-div">
+            <h1>JavaScript Development</h1>
+            <p>With a deep understanding of JavaScript, I build interactive and dynamic user interfaces.</p>
+          </div>
+        </div>
+      </div>
+      <div class="services-box-parent-row">
+        <div class="services-box-child-row" data-aos="fade-up">
+          <div class="services-i-tag-div">
+            <i class="fa-brands fa-bootstrap"></i>
+          </div>
+          <div class="services-box-content-div">
+            <h1>Bootstrap Framework</h1>
+            <p>I use Bootstrap to create responsive and mobile-first websites, ensuring smooth layouts across all devices.</p>
+          </div>
+        </div>
+        <div class="services-box-child-row" data-aos="fade-up">
+          <div class="services-i-tag-div">
+            <i class="fa-brands fa-react"></i>
+          </div>
+          <div class="services-box-content-div">
+            <h1>React Framework</h1>
+            <p>I develop full-stack applications using React delivering scalable and robust solutions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div hidden class="skills" id="skills">
+      <h2>My skills</h2>
+      <div class="skills-progress-bar" data-aos="fade-up">
+        <div id="html">
+          <h1>HTML & HTML5</h1>
+        </div>
+        <div id="css">
+          <h1>CSS</h1>
+        </div>
+        <div id="js">
+          <h1>JavaScript</h1>
+        </div>
+        <div class="react">
+          <h1>bootstrap</h1>
+        </div>
+      </div>
+      <div class="skills-progress-bar" style="margin-top: 80px;" data-aos="fade-up">
+        <div id="angular">
+          <h1>jquery</h1>
+        </div>
+        <div id="nodejs">
+          <h1>AJAX</h1>
+        </div>
+        <div id="express">
+          <h1>Web Applications(PWA)</h1>
+        </div>
+        <div id="mongodb">
+          <h1>React</h1>
+        </div>
+      </div>
+      <div class="skills-progress-bar" style="margin-top: 80px;" data-aos="fade-up">
+        <div class="react">
+          <h1>PHP</h1>
+        </div>
+        <div class="react">
+          <h1>Python</h1>
+        </div>
+        <div class="react">
+          <h1>C#</h1>
+        </div>
+        <div class="react">
+          <h1>C++</h1>
+        </div>
+      </div>
+      <div class="skills-progress-bar" style="margin-top: 80px;" data-aos="fade-up">
+        <div class="react">
+          <h1>MYSQL</h1>
+        </div>
+        <div class="react">
+          <h1>Flask</h1>
+        </div>
+        <div class="react">
+          <h1>SQL</h1>
+        </div>
+        <div class="react">
+          <h1>problemsolving</h1>
+        </div>
+      </div>
+      <div class="skills-progress-bar" style="margin-top: 80px;" data-aos="fade-up">
+        <div class="react">
+          <h1>Linux</h1>
+        </div>
+        <div class="react">
+          <h1>github</h1>
+        </div>
+        <div class="react">
+          <h1>CCNA</h1>
+        </div>
+        <div class="react">
+          <h1>CEH</h1>
+        </div>
+      </div>
+      <div class="skills-progress-bar" style="margin-top: 80px;" data-aos="fade-up">
+        <div class="react">
+          <h1>IT Management</h1>
+        </div>
+        <div class="react">
+          <h1>ICDL</h1>
+        </div>
+        <div class="react">
+          <h1>API development</h1>
+        </div>
+        <div class="react">
+          <h1>Network+</h1>
+        </div>
+      </div>
+      <div class="skills-progress-bar" style="margin-top: 80px;" data-aos="fade-up">
+        <div class="react">
+          <h1>MAYA</h1>
+        </div>
+        <div class="react">
+          <h1>Corel Draw</h1>
+        </div>
+        <div class="react">
+          <h1>PhotoShop</h1>
+        </div>
+        <div class="react">
+          <h1>iliustrator</h1>
+        </div>
+      </div>
+      <div class="skills-progress-bar" style="margin-top: 80px;" data-aos="fade-up">
+        <div class="react">
+          <h1>Microsoft Office</h1>
+        </div>
+        <div class="react">
+          <h1>Accounting</h1>
+        </div>
+        <div class="react">
+          <h1>Author</h1>
+        </div>
+        <div class="react">
+          <h1>Theologue & psychology</h1>
+        </div>
+      </div>
+      <div class="skills-progress-bar" style="margin-top: 80px;" data-aos="fade-up">
+        <div id="Ruby" >
+          <h1>Ruby</h1>
+        </div>
+        <div class="react">
+          <h1>AI & image processing enthusiast.</h1>
+        </div>
+      </div>
+    </div>
+    <div class="projects" id="projects">
+      <div class="services-first-heading" style="margin-top: 70px;">
+        <hr>
+        <p>Recent Works</p>
+      </div>
+      <h2>Recent projects</h2>
+      <div class="projects-parents">
+        <div class="projects-child-div" data-aos="fade-up" style="    border-radius: 9px;border-radius: 9px;
+          display: flex;    flex-direction: column;
+          align-content: center;
+          align-items: center;
+          justify-content: space-between;">
+          <div>
+            <img src="web-logo-social_mwai.png" style='    
+              border-radius: 4px;
+              margin-right: 11px;
+              height: 86px;' alt="">
+          </div>
+          <div>
+            <h1 style='justify-self: center;'>mwai</h1>
+            <div class="projects-button-div">
+              <a target="_blank" href="https://ai.masterworld.ir/">  <button>Live demo</button></a> 
+            </div>
+          </div>
+        </div>
+        <div class="projects-child-div" data-aos="fade-up" style="    border-radius: 9px;border-radius: 9px;
+          display: flex;
+          flex-direction: column;
+          align-content: center;
+          align-items: center;
+          justify-content: space-between;" >
+          <div>
+            <img src="person_ChrisDo" alt="" style='border-radius: 4px;'>
+          </div>
+          <div >
+            <h1 style='justify-items: anchor-center;'>ChrisDo</h1>
+            <div class="projects-button-div">
+              <a target="_blank" href="https://masterworld.ir/ChrisDo"> <button>Live demo</button></a> 
+            </div>
+          </div>
+        </div>
+        <div class="projects-child-div" data-aos="fade-up" style="    border-radius: 9px;border-radius: 9px;
+          display: flex;
+          flex-direction: column;
+          align-content: center;
+          align-items: center;
+          justify-content: space-between;">
+          <div>
+            <img src="LOGO-ICON_Farakar.png" alt="">
+          </div>
+          <div >
+            <h1 style='justify-items: anchor-center;'>Farakar</h1>
+            <div class="projects-button-div">
+              <a target="_blank" href="https://farakar.masterworld.ir/">   <button>Live demo</button></a>  
+            </div>
+          </div>
+        </div>
+        <div class="projects-child-div" data-aos="fade-up" style="    border-radius: 9px;border-radius: 9px;
+          display: flex;
+          flex-direction: column;
+          align-content: center;
+          align-items: center;
+          justify-content: space-between;" >
+          <div>
+            <img src="Haymode_Logo.png" alt="" style='border-radius: 4px;'>
+          </div>
+          <div >
+            <h1 style='justify-items: anchor-center;'>Haymode</h1>
+            <div class="projects-button-div">
+              <a target="_blank" href="http://masterworld.ir/Haymode"> <button>Live demo</button></a> 
+            </div>
+          </div>
+        </div>
+        <div class="projects-child-div" data-aos="fade-up" style="    border-radius: 9px;border-radius: 9px;
+          display: flex;
+          flex-direction: column;
+          align-content: center;
+          align-items: center;
+          justify-content: space-between;" >
+          <div>
+            <img src="Banner_Web_mwTranslate.png" alt="" style='border-radius: 4px;    height: 53px;width: 143px;'>
+          </div>
+          <div >
+            <h1 style='justify-items: anchor-center;'>mwai Translate</h1>
+            <div class="projects-button-div">
+              <a target="_blank" href="http://translate.masterworld.ir/"> <button>Live demo</button></a> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contact" id="contact">
+      <h1 id="get-started">Get started</h1>
+      <div class="contact-form">
+        <div class="contact-details-service" data-aos="fade-up">
+          <h1>100% Satisfaction Guaranteed</h1>
+          <p>As a skilled full-stack developer, I specialize in crafting seamless, efficient, and high-quality web solutions tailored to meet your unique needs.</p>
+          <span>What will be the next step?</span>
+          <div>
+            <p><i class="fa-solid fa-check"></i>We'll prepare the proposal.</p>
+            <p><i class="fa-solid fa-check"></i>we'll discuss it together.</p>
+            <p><i class="fa-solid fa-check"></i>let's start the discussion.</p>
+          </div>
+        </div>
+        <div>
+          <hr>
+          <form onsubmit="prepareMailto(event)" action="" data-aos="fade-up">
+            <h1>start your project</h1>
+            <div>
+              <input type="" name="name" placeholder="Your name" style="border-radius:4px;margin-left: -3px;">
+              <input type="" name="place" placeholder="Your place" class='place-class' >
+            </div>
+            <input type="text" name="project_type" placeholder="Which type of project" style="border-radius:4px;margin-left: -3px;">
+            <textarea  id="" rows="8" name="message" placeholder="Message" style="border-radius:4px;     margin-left: -3px;   "></textarea>
+            <button type="submit" style='    margin-left: -2px;
+              margin-right: 3px;'>Submit</button>
+          </form>
+          <script>
+            function prepareMailto(e) {
+                e.preventDefault(); // جلوگیری از ارسال فرم به صورت پیش‌فرض
+            
+                // دریافت اطلاعات فرم
+                const name = document.querySelector('input[name="name"]').value;
+                const place = document.querySelector('input[name="place"]').value;
+                const projectType = document.querySelector('input[name="project_type"]').value;
+                const message = document.querySelector('textarea[name="message"]').value;
+            
+                // ایجاد لینک mailto
+            const subject = `New Project Request - ${name}`;
+            const body = `
+            Project Type: ${projectType}
+            
+            Location: ${place}
+            
+            Message: ${message}
+            
+            ---------------------------
+            `;
+            const mailtoLink = `mailto:my.amirhossein.rahro@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            
+                // باز کردن لینک mailto
+                window.location.href = mailtoLink;
+            }
+          </script>
+        </div>
+      </div>
+      <footer>
+        <div class="social-media" style='margin-top: 10px;'>
+          <a href="https://www.linkedin.com/in/amirhossein-rahro/"> <i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://github.com/AMIRHOSSEIN-RAHRO">  <i class="fa-brands fa-github"></i> </a>
+        </div>
+        <div style="      width: 103%;
+          justify-content: center">Copyright ©2024 All rights reserved AIRSECURITY</div>
+      </footer>
+    </div>
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"94a9e417cbb924f9","version":"2025.5.0","r":1,"token":"97ae79656e744c54b676b41badc75dbe","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}}}' crossorigin="anonymous"></script>
+</body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script>
+    var bar = new ProgressBar.Line(html, {
+    strokeWidth: 4,
+    easing: 'easeInOut',
+    duration: 1400,
+    color: '#212747',
+    trailColor: '#eee',
+    trailWidth: 1,
+    svgStyle: {width: '100%', height: '100%'}
+    });
+    
+    bar.animate(1.0);  // Number from 0.0 to 1.0
+    
+    var bar = new ProgressBar.Line(css, {
+    strokeWidth: 4,
+    easing: 'easeInOut',
+    duration: 1400,
+    color: '#212747',
+    trailColor: '#eee',
+    trailWidth: 1,
+    svgStyle: {width: '90%', height: '100%'}
+    });
+    
+    bar.animate(1.0);  // Number from 0.0 to 1.0
+    
+    
+    
+    var bar = new ProgressBar.Line(js, {
+    strokeWidth: 4,
+    easing: 'easeInOut',
+    duration: 1400,
+    color: '#212747',
+    trailColor: '#eee',
+    trailWidth: 1,
+    svgStyle: {width: '90%', height: '100%'}
+    });
+    
+    bar.animate(1.0);  // Number from 0.0 to 1.0
+    
+    
+    // انتخاب تمام عناصر دارای کلاس "react"
+    var elements = document.querySelectorAll('.react');
+    
+    // برای هر عنصر یک نوار پیشرفت ایجاد کنید
+    elements.forEach((element) => {
+    var bar = new ProgressBar.Line(element, {
+      strokeWidth: 4,
+      easing: 'easeInOut',
+      duration: 1400,
+      color: '#212747',
+      trailColor: '#eee',
+      trailWidth: 1,
+      svgStyle: { width: '90%', height: '100%' }
+    });
+    
+    // مقدار نوار پیشرفت را تنظیم کنید
+    bar.animate(1.0); // از 0.0 تا 1.0 پیشرفت می‌کند
+    });
+    
+    
+    var bar = new ProgressBar.Line(Ruby, {
+    strokeWidth: 4,
+    easing: 'easeInOut',
+    duration: 1400,
+    color: '#212747',
+    trailColor: '#eee',
+    trailWidth: 1,
+    svgStyle: {width: '10%', height: '100%'}
+    });
+    
+    bar.animate(1.0);  // Number from 0.0 to 1.0
+    
+    
+    var bar = new ProgressBar.Line(angular, {
+    strokeWidth: 4,
+    easing: 'easeInOut',
+    duration: 1400,
+    color: '#212747',
+    trailColor: '#eee',
+    trailWidth: 1,
+    svgStyle: {width: '90%', height: '100%'}
+    });
+    
+    bar.animate(1.0);  // Number from 0.0 to 1.0
+    
+    
+    
+    var bar = new ProgressBar.Line(nodejs, {
+    strokeWidth: 4,
+    easing: 'easeInOut',
+    duration: 1400,
+    color: '#212747',
+    trailColor: '#eee',
+    trailWidth: 1,
+    svgStyle: {width: '90%', height: '100%'}
+    });
+    
+    bar.animate(1.0);  // Number from 0.0 to 1.0
+    
+    
+    var bar = new ProgressBar.Line(express, {
+    strokeWidth: 4,
+    easing: 'easeInOut',
+    duration: 1400,
+    color: '#212747',
+    trailColor: '#eee',
+    trailWidth: 1,
+    svgStyle: {width: '90%', height: '100%'}
+    });
+    
+    bar.animate(1.0);  // Number from 0.0 to 1.0
+    
+    var bar = new ProgressBar.Line(mongodb, {
+    strokeWidth: 4,
+    easing: 'easeInOut',
+    duration: 1400,
+    color: '#212747',
+    trailColor: '#eee',
+    trailWidth: 1,
+    svgStyle: {width: '100%', height: '100%'}
+    });
+    
+    
+    bar.animate(1.0);  // Number from 0.0 to 1.0
+    
+    
+    
+    
+    
+    var bar = new ProgressBar.Line(git, {
+    strokeWidth: 4,
+    easing: 'easeInOut',
+    duration: 1400,
+    color: '#212747',
+    trailColor: '#eee',
+    trailWidth: 1,
+    svgStyle: {width: '100%', height: '100%'}
+    });
+    
+    bar.animate(1.0);  // Number from 0.0 to 1.0
+    
+    
+    var bar = new ProgressBar.Line(firebase, {
+    strokeWidth: 4,
+    easing: 'easeInOut',
+    duration: 1400,
+    color: '#212747',
+    trailColor: '#eee',
+    trailWidth: 1,
+    svgStyle: {width: '50%', height: '100%'}
+    });
+    
+    bar.animate(1.0);  // Number from 0.0 to 1.0
+    
+    var bar = new ProgressBar.Line(boojs, {
+    strokeWidth: 4,
+    easing: 'easeInOut',
+    duration: 1400,
+    color: '#212747',
+    trailColor: '#eee',
+    trailWidth: 1,
+    svgStyle: {width: '100%', height: '100%'} 
+    });
+    
+    bar.animate(1.0);  // Number from 0.0 to 1.0
+    
+    var bar = new ProgressBar.Line(problemsolving, {
+    strokeWidth: 4,
+    easing: 'easeInOut',
+    duration: 1400,
+    color: '#212747',
+    trailColor: '#eee',
+    trailWidth: 1,
+    svgStyle: {width: '100%', height: '100%'}
+    });
+    
+    bar.animate(1.0);  // Number from 0.0 to 1.0
+    
+    
+  </script>
+  <script>
+    document.addEventListener('keydown', function(e) {
+      // جلوگیری از باز شدن ابزار توسعه‌دهنده با کلیدهای ترکیبی
+      if (
+          e.keyCode === 123 || // F12
+          (e.ctrlKey && e.shiftKey && e.keyCode === 73) || // Ctrl+Shift+I
+          (e.ctrlKey && e.shiftKey && e.keyCode === 74) || // Ctrl+Shift+J
+          (e.ctrlKey && e.keyCode === 85) // Ctrl+U
+      ) {
+          e.preventDefault();
+      }
+    });
+  </script>
+  <style>
+    body::-webkit-scrollbar {
+    width: 7px;
+    }
+    body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    }
+    body::-webkit-scrollbar-thumb {
+    background: #212747;
+    border-radius: 1px;
+    }
+    body::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    }
+  </style>
+</html>
