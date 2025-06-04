@@ -690,6 +690,7 @@ footer div a i{
 }
 
 
+
 @media screen and (max-width:1113px) {
     .services{
         margin-top: 70px;
@@ -704,6 +705,18 @@ footer div a i{
         margin: 20px;
     
     }
+    
+    .style_nav
+    {
+    padding: 0px !important;
+    margin-left: -16px !important;
+    justify-content: center !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    margin-top: 7px !important;
+    margin-bottom: 15px !important;
+}
+
 }
 
 
